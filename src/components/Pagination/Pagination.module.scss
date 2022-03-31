@@ -1,0 +1,81 @@
+@import "../../styles/variables/variables";
+.paginationContainer {
+  display: flex;
+  list-style-type: none;
+}
+
+.paginationItem {
+  text-align: center;
+  margin: auto 2px;
+  color: $main-blue;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  line-height: 17px;
+  letter-spacing: -0.471429px;
+  border-radius: 16px;
+  max-width: min-content;
+  min-width: 18px;
+  height: 18px;
+  cursor: pointer;
+
+  @media screen and (min-width: 0) and (max-width: 767px) {
+    margin: auto 3px;
+    line-height: 12px;
+    font-size: 10px;
+    align-self: center;
+    text-align: center;
+    justify-self: center;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+}
+.dots :hover {
+  background-color: transparent;
+  cursor: default;
+  &:hover {
+    background-color: $main-blue;
+    cursor: pointer;
+  }
+}
+
+.selected {
+  color: #EEEEEE;
+  background-color: $main-blue;
+}
+
+.arrow {
+ padding-top: 2px;
+}
+
+.left {
+  @extend .arrow;
+  margin: 0 0 0 auto;
+}
+
+.right {
+  @extend .arrow;
+}
+
+.disabled {
+  pointer-events: none;
+
+  .arrow::before {
+    border-right: 0.12em solid rgba(0, 0, 0, 0.43);
+    border-top: 0.12em solid rgba(0, 0, 0, 0.43);
+  }
+
+  &:hover {
+    background-color: transparent;
+    cursor: default;
+  }
+}
+
+.paginationNumber {
+  align-self: center;
+  margin: auto;
+
+}

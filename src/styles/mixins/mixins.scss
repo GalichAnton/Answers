@@ -1,0 +1,87 @@
+@import "../variables/variables";
+@mixin button-state {
+  transition: $transition;
+  &:disabled {
+    background: $main-light-grey;
+    cursor: auto;
+  }
+  &:not([disabled]):hover {
+    filter: $btn-hover;
+  }
+
+  &:active {
+    filter: $btn-active;
+  }
+
+  &:focus {
+    filter: $btn-focus;
+  }
+}
+
+@mixin hover-opacity {
+  transition: $transition;
+  &:disabled {
+    background: $main-light-grey;
+  }
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+@mixin active {
+  transition: $transition;
+  visibility: hidden;
+  opacity: 0;
+
+  &_active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@mixin hover-round {
+  transition: $transition;
+
+  &:hover {
+    color: white;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+    border-radius: 50%;
+  }
+
+  &:focus {
+    border: 1px solid #eee;
+    box-sizing: border-box;
+    border-radius: 50%;
+    color: $main-accent;
+  }
+}
+
+@mixin hover-svg {
+  path {
+    transition: $transition;
+  }
+
+  :hover path {
+    stroke: $main-accent;
+  }
+}
+
+@mixin font-adapt{
+  @media screen and (max-width: 1200px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 1024px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+@mixin input-error{
+  color: #c4183c;
+  font-size: 11px;
+  line-height: 16px;
+  margin-top: 5px;
+}
