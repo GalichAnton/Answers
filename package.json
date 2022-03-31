@@ -1,5 +1,6 @@
 {
-  "name": "adminscratch",
+  "name": "answers",
+  "homepage": "https://GalichAnton.github.io/Answers",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -22,7 +23,6 @@
   "bugs": {
     "url": "https://github.com/GalichAnton/adminFromScratch/issues"
   },
-  "homepage": "https://galichanton.github.io/CarsharingAdmin/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.0",
     "@types/react-router-dom": "^5.3.3",
