@@ -1,10 +1,10 @@
 import React from "react";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import MainPage from "../pages/MainPage/MainPage";
 import Answers from "../components/Answers/Answers";
 const Router = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<MainPage />}>
           <Route
@@ -18,7 +18,7 @@ const Router = () => {
         {/* </Route>*/}
         {/* <Route path={"*"} element={<NotFound />} />*/}
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
