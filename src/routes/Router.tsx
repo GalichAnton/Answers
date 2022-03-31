@@ -1,13 +1,16 @@
 import React from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import MainPage from "../pages/MainPage/MainPage";
-import Questions from "../components/Questions/Questions";
+import Answers from "../components/Answers/Answers";
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MainPage />}>
-          <Route path={"questions/:questionId"} element={<Questions />} />
+          <Route
+            path={"questions/:category/:questionId"}
+            element={<Answers />}
+          />
         </Route>
 
         {/* <Route  element={<Tasks />} >*/}

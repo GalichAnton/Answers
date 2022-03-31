@@ -2,23 +2,24 @@
 .paginationContainer {
   display: flex;
   list-style-type: none;
+  padding: 0;
 }
 
 .paginationItem {
   text-align: center;
   margin: auto 2px;
-  color: $main-blue;
+  color: $main-dark-blue;
   display: flex;
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 17px;
   letter-spacing: -0.471429px;
   border-radius: 16px;
   max-width: min-content;
-  min-width: 18px;
-  height: 18px;
+  min-width: 22px;
+  height: 22px;
   cursor: pointer;
 
   @media screen and (min-width: 0) and (max-width: 767px) {
@@ -37,14 +38,14 @@
   background-color: transparent;
   cursor: default;
   &:hover {
-    background-color: $main-blue;
+    background-color: greenyellow;
     cursor: pointer;
   }
 }
 
 .selected {
-  color: #EEEEEE;
-  background-color: $main-blue;
+  color: $main-dark-blue;
+  background-color: greenyellow;
 }
 
 .arrow {

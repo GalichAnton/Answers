@@ -1,15 +1,24 @@
 import React from "react";
 import classes from "./ContentList.module.scss";
 import { NavLink } from "react-router-dom";
-import { answers } from "../../data/answers";
-
+const categories = [
+  { title: "Общие вопросы", name: "general" },
+  { title: "Java Script", name: "js" },
+  { title: "React", name: "react" },
+  { title: "Type Script", name: "TS" },
+];
 const ContentList = () => {
   return (
     <div className={classes.wrapper}>
       <ul className={classes.list}>
-        {answers.map((answer) => (
-          <li key={answer.id} className={classes.item}>
-            <NavLink to={`questions/${answer.id}`}>{answer.title}</NavLink>
+        {categories.map((category) => (
+          <li key={category.title}>
+            <NavLink
+              className={classes.item}
+              to={`questions/${category.name}/1`}
+            >
+              {category.title}
+            </NavLink>
           </li>
         ))}
       </ul>
