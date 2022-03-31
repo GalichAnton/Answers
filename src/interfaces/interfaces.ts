@@ -3,7 +3,7 @@ interface link {
   url: string;
 }
 
-type Category = "general" | "js" | "react" | "ts" | "HTML/CSS";
+export type Category = "general" | "js" | "react" | "ts" | "HTML/CSS";
 
 export interface Answer {
   id: string;

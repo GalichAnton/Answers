@@ -1,12 +1,27 @@
 import React, { FC } from "react";
-import { Answer } from "../../../interfaces/interfaces";
+import { Answer, Category } from "../../../interfaces/interfaces";
 import classes from "./AnswersItem.module.scss";
 interface QuestionItemProps {
   answer?: Answer;
 }
 const AnswersItem: FC<QuestionItemProps> = ({ answer }) => {
+  const setCategory = (category: Category | undefined) => {
+    switch (category) {
+      case "general":
+        return "Общие вопросы";
+      case "js":
+        return "Java Script";
+      case "ts":
+        return "Type Script";
+      case "react":
+        return "React";
+      default:
+        return "";
+    }
+  };
   return (
     <div className={classes.answer}>
+      <h2 className={classes.title}>{setCategory(answer?.category)}</h2>
       <h2 className={classes.title}>{answer?.title}</h2>
       <div className={classes.infoBox}>
         <div className={classes.imgBox}>
@@ -14,8 +29,10 @@ const AnswersItem: FC<QuestionItemProps> = ({ answer }) => {
         </div>
         <iframe
           className={classes.video}
+          allowFullScreen
+          frameBorder="0"
           title="Youtube player"
-          sandbox="allow-same-origin allow-forms allow-popups allow-scripts allow-presentation"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           src={`https://youtube.com/embed/${answer?.video}?autoplay=0`}
         />
       </div>

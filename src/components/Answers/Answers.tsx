@@ -1,5 +1,5 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { NavLink, useNavigate, useParams } from "react-router-dom";
 import Pagination from "../Pagination/Pagination";
 import AnswersItem from "./AnswerItem/AnswersItem";
 import classes from "./Answers.module.scss";

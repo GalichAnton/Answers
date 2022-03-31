@@ -2,11 +2,44 @@
 @import '../../styles/mixins/mixins';
 .answers{
   display: flex;
+  overflow: auto;
+  height: 100%;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   padding: 20px 0;
-  height: 100%;
-  overflow: auto;
+}
+
+.sideBar{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 20%;
+  align-items: center;
+}
+
+.answerList{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.categoryTitle{
+  color: white;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.link{
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.activeLink{
+  @extend .link;
+  color: #2c3e50;
 }
 
 .button{
@@ -16,4 +49,6 @@
   border-radius: 6px;
   color: $main-dark-blue;
   background: greenyellow;
+  cursor: pointer;
 }
+
