@@ -36,11 +36,18 @@ const AnswersItem: FC<QuestionItemProps> = ({ answer }) => {
           src={`https://youtube.com/embed/${answer?.video}?autoplay=0`}
         />
       </div>
+      <h3 className={classes.descr}>Краткое описание</h3>
       <p className={classes.descr}>{answer?.descr}</p>
       <ul className={classes.links}>
         Подробнее &gt;
         {answer?.links.map((link) => (
-          <a className={classes.link} key={link.url} href={link.url}>
+          <a
+            className={classes.link}
+            key={link.url}
+            href={link.url}
+            target={"_blank"}
+            rel="noreferrer"
+          >
             {link.title}
           </a>
         ))}

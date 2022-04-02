@@ -1,21 +1,26 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
-import { NavLink, useNavigate, useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import Pagination from "../Pagination/Pagination";
 import AnswersItem from "./AnswerItem/AnswersItem";
 import classes from "./Answers.module.scss";
 import { useAppSelector } from "../../hooks/redux/redux-hooks";
 import { Answer } from "../../interfaces/interfaces";
 const Answers = () => {
-  const [currentPage, setCurrentPage] = useState(1);
   const [currentAnswers, setCurrentAnswers] = useState<Answer[]>([]);
   const generalAnswers = useAppSelector((state) => state.answer.generalAnswers);
   const jsAnswers = useAppSelector((state) => state.answer.jsAnswers);
+  const tsAnswers = useAppSelector((state) => state.answer.tsAnswers);
+  const reactAnswers = useAppSelector((state) => state.answer.reactAnswers);
+  const gitAnswers = useAppSelector((state) => state.answer.gitAnswers);
   const { category, questionId } = useParams();
+  const [currentPage, setCurrentPage] = useState(Number(questionId));
   const navigate = useNavigate();
   const onPageChange = (page: number) => {
     setCurrentPage(page);
-    navigate(`/questions/${category}/${currentPage}`);
   };
+  useEffect(() => {
+    navigate(`/questions/${category}/${currentPage}`);
+  }, [currentPage]);
   useEffect(() => {
     switch (category) {
       case "general":
@@ -24,10 +29,20 @@ const Answers = () => {
       case "js":
         setCurrentAnswers(jsAnswers);
         return;
+      case "ts":
+        setCurrentAnswers(tsAnswers);
+        return;
+      case "react":
+        setCurrentAnswers(reactAnswers);
+        return;
+      case "git":
+        setCurrentAnswers(gitAnswers);
+        return;
       default:
         return;
     }
   }, [category]);
+
   return (
     <div className={classes.answers}>
       <AnswersItem

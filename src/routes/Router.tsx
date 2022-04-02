@@ -11,12 +11,11 @@ const Router = () => {
             path={"questions/:category/:questionId"}
             element={<Answers />}
           />
+          {/* <Route*/}
+          {/*  path={"tasks/:category/:taskId"}*/}
+          {/*  element={<Tasks />}*/}
+          {/* />*/}
         </Route>
-
-        {/* <Route  element={<Tasks />} >*/}
-        {/*  <Route path={':taskId'}/>*/}
-        {/* </Route>*/}
-        {/* <Route path={"*"} element={<NotFound />} />*/}
       </Routes>
     </HashRouter>
   );
