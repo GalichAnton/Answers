@@ -7,11 +7,8 @@ import { useAppSelector } from "../../hooks/redux/redux-hooks";
 import { Answer } from "../../interfaces/interfaces";
 const Answers = () => {
   const [currentAnswers, setCurrentAnswers] = useState<Answer[]>([]);
-  const generalAnswers = useAppSelector((state) => state.answer.generalAnswers);
-  const jsAnswers = useAppSelector((state) => state.answer.jsAnswers);
-  const tsAnswers = useAppSelector((state) => state.answer.tsAnswers);
-  const reactAnswers = useAppSelector((state) => state.answer.reactAnswers);
-  const gitAnswers = useAppSelector((state) => state.answer.gitAnswers);
+  const { generalAnswers, jsAnswers, tsAnswers, reactAnswers, gitAnswers } =
+    useAppSelector((state) => state.answer);
   const { category, questionId } = useParams();
   const [currentPage, setCurrentPage] = useState(Number(questionId));
   const navigate = useNavigate();

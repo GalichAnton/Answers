@@ -14,3 +14,7 @@ export interface Answer {
   video?: string;
   links: link[];
 }
+
+export interface Task extends Omit<Answer, "links" | "image"> {
+  codepenUrl: string;
+}

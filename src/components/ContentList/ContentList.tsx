@@ -3,17 +3,16 @@ import classes from "./ContentList.module.scss";
 import { NavLink } from "react-router-dom";
 import { useAppSelector } from "../../hooks/redux/redux-hooks";
 const ContentList = () => {
-  const generalAnswers = useAppSelector((state) => state.answer.generalAnswers);
-  const jsAnswers = useAppSelector((state) => state.answer.jsAnswers);
-  const tsAnswers = useAppSelector((state) => state.answer.tsAnswers);
-  const reactAnswers = useAppSelector((state) => state.answer.reactAnswers);
-  const gitAnswers = useAppSelector((state) => state.answer.gitAnswers);
+  const { generalAnswers, jsAnswers, tsAnswers, reactAnswers, gitAnswers } =
+    useAppSelector((state) => state.answer);
+  const { jsTasks } = useAppSelector((state) => state.tasks);
   const categories = [
     { title: "Общие вопросы", name: "general", answers: generalAnswers },
     { title: "Java Script", name: "js", answers: jsAnswers },
     { title: "Type Script", name: "ts", answers: tsAnswers },
     { title: "React/Redux", name: "react", answers: reactAnswers },
     { title: "Git", name: "git", answers: gitAnswers },
+    { title: "JS задачки", name: "js", answers: jsTasks },
   ];
   return (
     <div className={classes.wrapper}>
@@ -27,7 +26,11 @@ const ContentList = () => {
                 <li key={answer.id}>
                   <NavLink
                     className={classes.item}
-                    to={`questions/${category.name}/${answer.id}`}
+                    to={
+                      category.title.includes("задачки")
+                        ? `tasks/${category.name}/${answer.id}`
+                        : `questions/${category.name}/${answer.id}`
+                    }
                   >
                     {answer.title}
                   </NavLink>

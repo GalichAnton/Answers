@@ -1,9 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import ansverReducer from "./slices/AnswerSlice";
-
+import answerReducer from "./slices/AnswerSlice";
+import tasksReducer from "./slices/TasksSlice";
 export const store = configureStore({
   reducer: {
-    answer: ansverReducer,
+    answer: answerReducer,
+    tasks: tasksReducer,
   },
 });
 

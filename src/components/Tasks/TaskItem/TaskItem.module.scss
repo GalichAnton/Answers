@@ -1,0 +1,50 @@
+.answer{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10%;
+  align-items: center;
+  width: 100%;
+}
+
+.title{
+  font-size: 32px;
+  color: white;
+}
+
+.infoBox{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.imgBox{
+  width: 45%;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.descr{
+  color: white;
+  font-size: 20px;
+}
+
+.links{
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  color: lawngreen;
+  padding: 5px;
+}
+
+.video{
+  width: 45%;
+}
