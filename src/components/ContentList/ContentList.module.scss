@@ -9,24 +9,37 @@
   align-items: center;
   margin: 0 auto;
   overflow: auto;
+  @media screen and (max-width: 1024px) {
+    padding: 20px;
+  }
 }
 
 .list{
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(4,1fr);
   gap: 30px;
-  padding: 0;
   margin: 0;
   list-style-type: none;
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+  }
+  @media screen and (max-width: 520px) {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 }
 .item{
   @include hover-opacity;
+  @include font-adapt;
   color: white;
   font-weight: 500;
   text-decoration: none;
 }
 
 .category{
+  @include font-adapt;
   color: #071838FF;
   font-size: 20px;
   font-weight: 700;

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { Task, Category } from "../../../interfaces/interfaces";
-import classes from "./TaskItem.module.scss";
+import classes from "../../Answers/AnswerItem/AnswersItem.module.scss";
 interface QuestionItemProps {
   task?: Task;
 }
@@ -25,7 +25,7 @@ const TaskItem: FC<QuestionItemProps> = ({ task }) => {
       <h2 className={classes.title}>{task?.title}</h2>
       <div className={classes.infoBox}>
         <iframe
-          className={classes.video}
+          className={classes.iframeBox}
           allowFullScreen
           frameBorder="0"
           title="Youtube player"
@@ -33,24 +33,15 @@ const TaskItem: FC<QuestionItemProps> = ({ task }) => {
           src={`https://youtube.com/embed/${task?.video}?autoplay=0`}
         />
         <iframe
+          className={classes.iframeBox}
           height="400"
-          style={{ width: "45%" }}
           scrolling="no"
-          title="Palindrom"
-          src={`https://codepen.io/galichanton/embed/${task?.codepenUrl}?default-tab=js`}
+          title={task?.title}
+          src={task?.codepenUrl}
           frameBorder="no"
           loading="lazy"
-          allowTransparency={true}
           allowFullScreen={true}
-        >
-          See the Pen{" "}
-          <a href={`https://codepen.io/galichanton/pen/${task?.codepenUrl}`}>
-            {task?.title}
-          </a>{" "}
-          by Anton Galich (
-          <a href="https://codepen.io/galichanton">@galichanton</a>) on{" "}
-          <a href="https://codepen.io">CodePen</a>.
-        </iframe>
+        />
       </div>
       <h3 className={classes.descr}>Постановка задачи</h3>
       <p className={classes.descr}>{task?.descr}</p>

@@ -28,7 +28,7 @@ const AnswersItem: FC<QuestionItemProps> = ({ answer }) => {
           <img src={answer?.image} alt="pic" />
         </div>
         <iframe
-          className={classes.video}
+          className={classes.iframeBox}
           allowFullScreen
           frameBorder="0"
           title="Youtube player"
