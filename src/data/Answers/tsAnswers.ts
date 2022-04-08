@@ -7,8 +7,7 @@ export const tsAnswers: Answer[] = [
     title: "Что такое TypeScript? Зачем его использовать вместо JavaScript?",
     descr:
       "TypeScript — это расширенная версия JavaScript, главной целью которого является упрощение разработки крупных JS-приложений. Этот язык добавляет много новых принципов — классы, дженерики, интерфейсы, статические типы, что позволяет разработчикам использовать разные инструменты, такие как статический анализатор или рефакторинг кода.",
-    image:
-      "https://s3.amazonaws.com/oodles-technologies1/blog-images/e4d5fcf3-1a66-4d05-8dd4-1573e815121f.jpeg",
+    image: "https://devopedia.org/images/article/165/6445.1554799186.jpg",
     video: "uE7uDeiFejw",
     links: [
       {

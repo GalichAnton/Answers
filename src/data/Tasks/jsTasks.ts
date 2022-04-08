@@ -182,4 +182,83 @@ export const jsTasks: Task[] = [
     video: "chWI2gx8qNE",
     codepenUrl: "https://codepen.io/galichanton/embed/xxpPaZj?default-tab=js",
   },
+  {
+    id: "22",
+    category: "js",
+    title: "Прототипы",
+    descr: "Прример прототипного наследования",
+    video: "b55hiUlhAzI",
+    codepenUrl: "https://codepen.io/galichanton/embed/LYeQJQm?default-tab=js",
+  },
+  {
+    id: "23",
+    category: "js",
+    title: "Уникальные символы",
+    descr: "Все ли сомволы в строке уникальны",
+    video: "x-EZy6gu_38",
+    codepenUrl: "https://codepen.io/galichanton/embed/VwyxKdX?default-tab=js",
+  },
+  {
+    id: "24",
+    category: "js",
+    title: "Удаление всех повторяющихся значений в строке",
+    descr:
+      "Напишите функцию, принимающая массив с вложенными массивами и распакуйте в результирующий плоский массов. В результате должны получить новый одномерный массив.",
+    video: "x-EZy6gu_38",
+    codepenUrl: "https://codepen.io/galichanton/embed/MWrGbaJ?default-tab=js",
+  },
+  {
+    id: "25",
+    category: "js",
+    title: "Какая строка встречается чаще всего",
+    descr:
+      "Напишите функцию, которая принимает массив строк и возвращает самую частовстречающуюся строку в этом массиве. Если таких строк несколько, то нужно вернуть первую, идя слева на право.",
+    video: "x-EZy6gu_38",
+    codepenUrl: "https://codepen.io/galichanton/embed/QWarGKN?default-tab=js",
+  },
+  {
+    id: "26",
+    category: "js",
+    title: "Каррирование",
+    descr:
+      "Каррирование – это трансформация функций таким образом, чтобы они принимали аргументы не как f(a, b, c), а как f(a)(b)(c).",
+    video: "pxgMoBMMMXU",
+    codepenUrl: "https://codepen.io/galichanton/embed/QWarGBp?default-tab=js",
+  },
+  {
+    id: "27",
+    category: "js",
+    title: "Является ли массив подмножеством другого массива",
+    descr:
+      "Напишите функцию, которая проверяет, является ли второй массив подмножеством первого. То есть есть ли элементы второго массива в первом.",
+    video: "x-EZy6gu_38",
+    codepenUrl: "https://codepen.io/galichanton/embed/mdpLRqR?default-tab=js",
+  },
+  {
+    id: "28",
+    category: "js",
+    title: "Перевернуть матрицу 3х3",
+    descr:
+      "Напишите функцию, которая принимает матрицу 3х3 и переворачивает на 90 градусов по часовой стрелке.",
+    video: "x-EZy6gu_38",
+    codepenUrl: "https://codepen.io/galichanton/embed/QWardPZ?default-tab=js",
+  },
+  {
+    id: "29",
+    category: "js",
+    title: "Бинарный поиск",
+    descr:
+      "Напишите функцию, которая принимает отсортированный массив с числами и число. Необходимо вернуть индекс числа, если оно есть в массиве. Иначе вернуть -1.",
+    video: "x-EZy6gu_38",
+    codepenUrl: "https://codepen.io/galichanton/embed/oNpdZLW?default-tab=js",
+  },
+  {
+    id: "30",
+    category: "js",
+    title: "Очередь с О(1) сложностью операций",
+    descr:
+      "Создайте очередь, в которой буду реализованы операции на добавление элементов в конец очереди, удаление первого элемента и вычисление размера очереди с сложностью алгоритма О(1) .",
+    video: "x-EZy6gu_38",
+    codepenUrl: "https://codepen.io/galichanton/embed/GRydWrd?default-tab=js",
+  },
 ];

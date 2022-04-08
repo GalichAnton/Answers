@@ -348,23 +348,4 @@ export const reactAnswers: Answer[] = [
       },
     ],
   },
-  {
-    id: "19",
-    category: "react",
-    title: "React Hooks(зачем перешли, какие проблемы решают)",
-    descr:
-      "Хуки — нововведение в React 16.8, которое позволяет использовать состояние и другие возможности React без написания классов.",
-    image: "https://miro.medium.com/max/1400/1*IbfsXCPT4v6z4_v_VHLxOQ.jpeg",
-    video: "EbqQg0K4wbo",
-    links: [
-      {
-        title: "reactjs",
-        url: "https://ru.reactjs.org/docs/hooks-intro.html",
-      },
-      {
-        title: "medium",
-        url: "https://medium.com/sibdev/в-прошлом-году-react-получил-глобальное-нововведение-hooks-или-хуки-d52b6502224d",
-      },
-    ],
-  },
 ];
